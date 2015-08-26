@@ -34,7 +34,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="1" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="6" fill="1" visible="yes" active="no"/>
 <layer number="28" name="bValues" color="5" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
@@ -71,6 +71,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="yes" active="yes"/>
 <layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
@@ -264,17 +265,6 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <text x="-2.286" y="1.651" size="0.4064" layer="25">&gt;NAME</text>
 <text x="0.254" y="1.651" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
-<package name="SOD-323">
-<wire x1="-0.9" y1="0.65" x2="-0.5" y2="0.65" width="0.2032" layer="21"/>
-<wire x1="-0.5" y1="0.65" x2="0.9" y2="0.65" width="0.2032" layer="21"/>
-<wire x1="-0.9" y1="-0.65" x2="-0.5" y2="-0.65" width="0.2032" layer="21"/>
-<wire x1="-0.5" y1="-0.65" x2="0.9" y2="-0.65" width="0.2032" layer="21"/>
-<wire x1="-0.5" y1="0.65" x2="-0.5" y2="-0.65" width="0.2032" layer="21"/>
-<smd name="1" x="-1.15" y="0" dx="0.63" dy="0.83" layer="1"/>
-<smd name="2" x="1.15" y="0" dx="0.63" dy="0.83" layer="1"/>
-<text x="-0.889" y="1.016" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-1.397" size="0.4064" layer="27">&gt;VALUE</text>
-</package>
 <package name="SMB-DIODE">
 <description>&lt;b&gt;Diode&lt;/b&gt;&lt;p&gt;
 Basic small signal diode good up to 200mA. SMB footprint. Common part #: BAS16</description>
@@ -296,20 +286,6 @@ Basic small signal diode good up to 200mA. SMB footprint. Common part #: BAS16</
 <text x="-1.905" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-2.794" y1="-1.0922" x2="-2.2606" y2="1.0922" layer="51"/>
 <rectangle x1="2.2606" y1="-1.0922" x2="2.794" y2="1.0922" layer="51"/>
-</package>
-<package name="SOD523">
-<wire x1="-0.59" y1="0.4" x2="0.59" y2="0.4" width="0.1016" layer="21"/>
-<wire x1="0.59" y1="0.4" x2="0.59" y2="-0.4" width="0.1016" layer="51"/>
-<wire x1="0.59" y1="-0.4" x2="-0.59" y2="-0.4" width="0.1016" layer="21"/>
-<wire x1="-0.59" y1="-0.4" x2="-0.59" y2="0.4" width="0.1016" layer="51"/>
-<rectangle x1="-0.75" y1="-0.17" x2="-0.54" y2="0.17" layer="51"/>
-<rectangle x1="0.54" y1="-0.17" x2="0.75" y2="0.17" layer="51"/>
-<rectangle x1="-0.59" y1="-0.4" x2="-0.3" y2="0.4" layer="51"/>
-<smd name="A" x="0.7" y="0" dx="0.7" dy="0.5" layer="1"/>
-<smd name="C" x="-0.6" y="0" dx="0.7" dy="0.5" layer="1"/>
-<text x="-0.7366" y="0.5588" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.6858" y="-0.9906" size="0.4064" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.1397" y1="-0.3937" x2="-0.0127" y2="0.381" layer="21"/>
 </package>
 <package name="SMC">
 <description>&lt;b&gt;DIODE&lt;/b&gt;</description>
@@ -1192,6 +1168,37 @@ grid 5.08 mm, diameter 8.5 mm</description>
 <text x="-2" y="-3" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="3.5" y="-3.5" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
+<package name="SOD80C">
+<description>&lt;B&gt;DIODE&lt;/B&gt;</description>
+<wire x1="1.3208" y1="0.7874" x2="-1.3208" y2="0.7874" width="0.1524" layer="51"/>
+<wire x1="1.3208" y1="-0.7874" x2="-1.3208" y2="-0.7874" width="0.1524" layer="51"/>
+<wire x1="0.627" y1="0.6" x2="-0.373" y2="0" width="0.2032" layer="21"/>
+<wire x1="-0.373" y1="0" x2="0.627" y2="-0.6" width="0.2032" layer="21"/>
+<wire x1="0.627" y1="-0.6" x2="0.627" y2="0.6" width="0.2032" layer="21"/>
+<smd name="C" x="-1.7" y="0" dx="1.4" dy="1.8" layer="1"/>
+<smd name="A" x="1.7" y="0" dx="1.4" dy="1.8" layer="1"/>
+<text x="-1.524" y="1.143" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.524" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.8542" y1="-0.8636" x2="-1.2954" y2="0.8636" layer="51"/>
+<rectangle x1="1.2954" y1="-0.8636" x2="1.8542" y2="0.8636" layer="51"/>
+<rectangle x1="-0.8636" y1="-0.7874" x2="-0.254" y2="0.7874" layer="21"/>
+</package>
+<package name="R0603">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="DIODE">
@@ -1308,25 +1315,7 @@ These are standard reverse protection diodes and small signal diodes.</descripti
 <technology name=""/>
 </technologies>
 </device>
-<device name="SOD" package="SOD-323">
-<connects>
-<connect gate="G$1" pin="A" pad="2"/>
-<connect gate="G$1" pin="C" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
 <device name="SMB" package="SMB-DIODE">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SOD523" package="SOD523">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1354,6 +1343,15 @@ These are standard reverse protection diodes and small signal diodes.</descripti
 </technologies>
 </device>
 <device name="SCHOTT" package="DIODE-SCHOTTKY">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOD-80" package="SOD80C">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1550,6 +1548,15 @@ These are standard reverse protection diodes and small signal diodes.</descripti
 </technologies>
 </device>
 <device name="0207/7" package="0207/7">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="R0603" package="R0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -2286,12 +2293,12 @@ NPN transistor</description>
 <part name="C4" library="iStivi - RCLD" deviceset="CAPACITOR_POL" device="E3.5-8" value="2.2uF"/>
 <part name="C1" library="iStivi - RCLD" deviceset="CAPACITOR_POL" device="E5-10.5" value="330uF"/>
 <part name="R5" library="iStivi - RCLD" deviceset="RESISTOR" device="R0805" value="56K"/>
-<part name="R4" library="iStivi - RCLD" deviceset="RESISTOR" device="R0805" value="10K"/>
+<part name="R4" library="iStivi - RCLD" deviceset="RESISTOR" device="R0805" value="3K3"/>
 <part name="R3" library="iStivi - RCLD" deviceset="RESISTOR" device="R0805" value="1K"/>
 <part name="R1" library="iStivi - RCLD" deviceset="RESISTOR" device="0207/10" value="220K"/>
 <part name="R6" library="iStivi - RCLD" deviceset="RESISTOR" device="R0805" value="2K2"/>
 <part name="C3" library="iStivi - RCLD" deviceset="CAPACITOR" device="C0805K" value="100pF"/>
-<part name="C2" library="iStivi - RCLD" deviceset="CAPACITOR" device="C0805K" value="2n2"/>
+<part name="C2" library="iStivi - RCLD" deviceset="CAPACITOR" device="C0805K" value="4n7"/>
 <part name="GND1" library="iStivi - Supply" deviceset="GND" device=""/>
 <part name="180V" library="iStivi - Header-Connector" deviceset="M02" device="3.5MM"/>
 <part name="GND2" library="iStivi - Supply" deviceset="GND" device=""/>
@@ -2301,10 +2308,12 @@ NPN transistor</description>
 <part name="C5" library="iStivi - RCLD" deviceset="CAPACITOR_POL" device="E2-5" value="10uF"/>
 <part name="U1" library="iStivi - Transistor-FET-reg" deviceset="TLV1117-5" device="SOT-223"/>
 <part name="U2" library="iStivi - Transistor-FET-reg" deviceset="BC817" device="" value="2N7002"/>
-<part name="L1" library="iStivi - RCLD" deviceset="INDUCTOR" device="" value="100uH"/>
+<part name="L1" library="iStivi - RCLD" deviceset="INDUCTOR" device="" value="180uH"/>
 <part name="Q1" library="iStivi - Transistor-FET-reg" deviceset="IRF740" device="S"/>
 <part name="P+1" library="iStivi - Supply" deviceset="VCC" device=""/>
-<part name="R8" library="iStivi - RCLD" deviceset="TRIM_POT" device="EVM2N"/>
+<part name="R8" library="iStivi - RCLD" deviceset="TRIM_POT" device="EVM2N" value="5K"/>
+<part name="D2" library="iStivi - RCLD" deviceset="DIODE" device="SOD-80"/>
+<part name="R2" library="iStivi - RCLD" deviceset="RESISTOR" device="R1206"/>
 </parts>
 <sheets>
 <sheet>
@@ -2335,6 +2344,8 @@ NPN transistor</description>
 <instance part="Q1" gate="G$1" x="50.8" y="38.1" rot="MR0"/>
 <instance part="P+1" gate="VCC" x="88.9" y="66.04"/>
 <instance part="R8" gate="G$1" x="0" y="17.78"/>
+<instance part="D2" gate="G$1" x="81.28" y="73.66" rot="R270"/>
+<instance part="R2" gate="G$1" x="0" y="2.54" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2398,8 +2409,8 @@ NPN transistor</description>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <pinref part="U2" gate="G$1" pin="E"/>
 <pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="R8" gate="G$1" pin="A"/>
-<wire x1="0" y1="10.16" x2="0" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="180V" gate="G$1" pin="2"/>
@@ -2535,10 +2546,8 @@ NPN transistor</description>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="88.9" y1="63.5" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
 <junction x="88.9" y="58.42"/>
-<wire x1="81.28" y1="58.42" x2="81.28" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="VIN" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="93.98" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="76.2" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<wire x1="81.28" y1="58.42" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2547,6 +2556,21 @@ NPN transistor</description>
 <pinref part="R8" gate="G$1" pin="S"/>
 <wire x1="60.96" y1="5.08" x2="5.08" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="5.08" x2="5.08" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="VIN" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="93.98" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="81.28" y1="76.2" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="R8" gate="G$1" pin="A"/>
+<wire x1="0" y1="7.62" x2="0" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
