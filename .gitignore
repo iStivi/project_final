@@ -6,3 +6,16 @@
 *.ps
 */*/*.xcf
 cam/
+*.cmp
+*.crc
+*.drd
+*.gpi
+*.oln
+*.plc
+*.sol
+*.stc
+*.sts
+*.zip
+*.crs
+*.dri
+*.pls

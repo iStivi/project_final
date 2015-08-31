@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="12.5" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -147,7 +147,7 @@
 <wire x1="0" y1="30" x2="0" y2="0" width="0" layer="20"/>
 <text x="1.905" y="10.795" size="1.27" layer="121" font="vector" ratio="10" rot="R90">VIN</text>
 <text x="1.905" y="15.24" size="1.27" layer="121" font="vector" ratio="10" rot="R90">GND</text>
-<text x="53.25" y="11" size="1.016" layer="121" font="vector" ratio="10" rot="R270">180V</text>
+<text x="53.25" y="10.6825" size="1.016" layer="121" font="vector" ratio="10" rot="R270">HV</text>
 <text x="53.25" y="14.5" size="1.016" layer="121" font="vector" ratio="10" rot="R270">GND</text>
 <text x="53.25" y="17.5" size="1.016" layer="121" font="vector" ratio="10" rot="R270">5V</text>
 <text x="53.25" y="21.5" size="1.016" layer="121" font="vector" ratio="10" rot="R270">GND</text>
